@@ -120,7 +120,7 @@ def generate_openai_response(question: str, context: str) -> str:
     return response.json()["choices"][0]["message"]["content"].strip()
 
 
-ans = answer("project1 for file not detecting after sending post request")
-print(ans)
+#ans = answer("project1 for file not detecting after sending post request")
+#print(ans)
 
 #project1 for file not detecting after sending post request
