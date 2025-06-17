@@ -119,6 +119,11 @@ def generate_openai_response(question: str, context: str) -> str:
     response.raise_for_status()
     return response.json()["choices"][0]["message"]["content"].strip()
 
+port = int(os.environ.get("PORT", 10000))
+# ...existing code...
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("chat:app", host="0.0.0.0", port=port)
 
 #ans = answer("project1 for file not detecting after sending post request")
 #print(ans)
